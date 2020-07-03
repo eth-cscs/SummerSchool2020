@@ -8,9 +8,9 @@ Fri 24.07 10.30-12:00 presented by Henrique
 #### Distributed training with tf.keras 2
 - [tf.distribute.Strategy](https://www.tensorflow.org/api_docs/python/tf/distribute/Strategy)
 
-- Multi-GPU:
+- Multi-GPU -> [tf.distribute.MirroredStrategy](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy):
 ```python
-        strategy = [tf.distribute.MirroredStrategy](https://www.tensorflow.org/api_docs/python/tf/distribute/MirroredStrategy)()
+        strategy = tf.distribute.MirroredStrategy()
         with strategy.scope():
             model = build_and_compile_model()
         model.fit(dataset, epochs steps_per_epoch)
