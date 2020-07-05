@@ -5,7 +5,7 @@ Material will be added to the repository throughout the course, which will requi
 
 ## Announcements
 
-We will use this section to post news and links relevant to the event.
+We will be using Slack to post news and links relevant to the event: you should receive an invitation to join the Summer School Slack workspace.
 
 ## Schedule
 
