@@ -1,1 +1,1 @@
-# Euclidean distance matrix with CuPy
+# [homework] Euclidean distance matrix with CuPy
