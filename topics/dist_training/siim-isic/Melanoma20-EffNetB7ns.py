@@ -56,8 +56,8 @@ CFG = AttrDict(
     LR_START         = 3e-3 * batch_size,
     LR_MAX           = 3e-2 * batch_size,
     LR_END           = 1e-2 * batch_size,
-    LR_RAMPUP_EPOCHS = 0.5,
-    epochs           = 5 if debug else 15,
+    LR_RAMPUP_EPOCHS = 2 if debug else 0.5,
+    epochs           = 6 if debug else 16,
 
     # Image Augmentation
     rot              = 180.0,
@@ -138,7 +138,7 @@ if debug:
     steps_train = 50
 
 print(f'Training for {steps_train} steps and ' +
-      f'validating for {steps_valid} steps per epoch,'
+      f'validating for {steps_valid} steps per epoch, '
       f'across {num_workers} node(s)')
 
 
