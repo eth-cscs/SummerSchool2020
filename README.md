@@ -7,6 +7,10 @@ Material will be added to the repository throughout the course, which will requi
 
 We will be using Slack to post news and links relevant to the event: you should receive an invitation to join the Summer School Slack workspace.
 
+### PASC21
+  
+  You can find [here](pasc21-presentation-for-summer-school-2020_20200721.pdf) the slides presented by Prof. Schenk.
+  
 ## Schedule
 
 ![Schedule](Schedule-SS2020.png "Summer School Schedule")
