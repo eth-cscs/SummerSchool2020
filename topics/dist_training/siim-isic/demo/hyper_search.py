@@ -66,7 +66,7 @@ if __name__ == '__main__':
     cluster.add_command('export PYTHONFAULTHANDLER=1')
     cluster.add_command('export NCCL_IB_HCA=ipogif0')
     cluster.add_command('export NCCL_IB_CUDA_SUPPORT=1')
-    
+
     cluster.add_command('srun nproc')
     cluster.add_command('srun which python')
 

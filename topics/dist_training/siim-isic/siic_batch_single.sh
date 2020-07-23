@@ -23,5 +23,4 @@ export NCCL_IB_CUDA_SUPPORT=1
 
 srun nproc
 srun which python
-srun python -u Melanoma20-EffNetB7ns.py
-
+srun python -u Melanoma20-EffNetB7ns-Single.py
