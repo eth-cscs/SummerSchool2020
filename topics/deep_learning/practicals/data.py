@@ -50,8 +50,8 @@ class Data:
         # never use random function without a seed, science is replicable!
         np.random.seed(1234)
 
-        # we create some random data by computing a pseudo invert neural network
-        # its pseudo because the activation are not inversed. You can figure out why with pen and paper.
+        # we create some random data by computing a pseudo inverse neural network
+        # its pseudo because the activation are not inverted. You can figure out why with pen and paper.
         # we start by defining the target y
         y = np.random.normal(size=(N,output_dim))
         if output_dim > 1:
