@@ -38,9 +38,7 @@ node_id = int(os.environ['SLURM_NODEID'])
 fold  = 4
 kfold = 5
 debug = True
-batch_size = # TODO: scale your global batch_size
-             # note: keras always expects global batch sizes
-             #       and splits it between the nodes accordingly
+batch_size = 80 * num_workers
 
 
 # In[3]:
@@ -118,7 +116,10 @@ tf.config.experimental.set_memory_growth(gpus[0], True)
 if num_workers == 1:
     strategy = tf.distribute.get_strategy() # default strategy
 else:
-    strategy = # TODO use MultiWorkerMirroredStrategy
+    strategy = tf.distribute.experimental.MultiWorkerMirroredStrategy(
+        cluster_resolver=tf.distribute.cluster_resolver.SlurmClusterResolver(),
+        communication=tf.distribute.experimental.CollectiveCommunication.NCCL,
+    )
 
 replicas = strategy.num_replicas_in_sync
 assert replicas == num_workers, f"replicas:{replicas} num_workers:{num_workers}"
